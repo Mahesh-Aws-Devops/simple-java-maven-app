@@ -19,6 +19,15 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.11.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
       <plugin>
         <!-- Build an executable JAR -->
@@ -48,7 +57,7 @@
             <configuration>
               <rules>
                 <requireMavenVersion>
-                  <version>[3.6.3,)</version>
+                  <version>[3.8.6,)</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
                   <version>[11,)</version>
@@ -57,14 +66,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version> <!-- Update to a newer version if desired -->
-        <configuration>
-          <!-- ... -->
-        </configuration>
       </plugin>
     </plugins>
   </build>
